@@ -1,0 +1,53 @@
+a:hover {
+  background-color: #e07f0f;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  border-radius: 10px;
+  display: block;
+  padding: 6px 6px;
+  text-decoration: none;
+}
+
+/*selectors */
+p::after {
+  content: ".";
+}
+
+a[href*="index.html"] {
+  background-color: #525252;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#titlee {
+  color: grey;
+}
+
+.contentTxt {
+  font-size: 30px;
+}
+
+.imgsize {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* media query */
+@media (max-width: 576px) {
+  body {
+    background-color: #f1f1f1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

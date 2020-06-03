@@ -1,0 +1,148 @@
+{% extends "generalLayout.html" %}
+
+{% block title %}
+Lectio Search - {{isbn}}
+{% endblock %}
+
+{% block body %}
+
+<div class="fluid-container">
+    <div class="titlediv center coolShadow">
+        <div class="center">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bookInfo coolShadow bold">
+            <div class="row">
+                <div class="col">
+                    Author: {{author}}
+                  </div>
+                  <div class="col">
+                    Number of ratings: {{bookInfo[0]['work_ratings_count']}}
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Year: {{year}}
+                  </div>
+                  <div class="col">
+                    Average rating: {{bookInfo[0]['average_rating']}}
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="bookInfo coolShadow">
+            <div class="row">
+                <div class="col">
+                    <h1>Comments</h1>
+                  </div>
+                  <div class="col">
+                    {% if allowsubmit %}
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal">Rate this book</button>
+                    {% else %}
+                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal" disabled>Already rated</button>
+                    {% endif %}
+                  </div>
+            </div>
+            {% if nocomments %}
+            <div>
+                <p class="bold">No comments yet</p>
+            </div>
+            {% endif %}
+            {% for comment in comments %}
+            <div class="commentblock container">
+                <div class="row">
+                    <div class="col">
+                        <h3>{{comment.user}}</h3>
+                      </div>
+                      <div class="col">
+                        <p class="bold">Given Rating: {{comment.rating}}</p>
+                      </div>
+                </div>
+                <div class="row" style="padding: 1em;">
+                    {{comment.comment}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Rate this book</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form  method="POST">
+        <div class="modal-body">
+            <div class="form-group" >
+                <label>Comment:</label>
+                <textarea class="form-control" rows="5" name="comment"></textarea>
+                <label>Range:</label>
+                <input type="range" id="points" name="points" min="0" max="5" value="0" style="width: 470px;">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block style %}
+<style>
+.center{
+    margin: auto;
+}
+
+body{
+    background-image: url("https://images.pexels.com/photos/1340588/pexels-photo-1340588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-color: #cccccc;
+}
+
+.titlediv{
+    margin-top: 2em;
+    height: 6em;
+    width: 50%;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 2em;
+}
+
+.bookInfo{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 2em;
+    padding: 2em;
+
+}
+
+.commentblock{
+    background-color: whitesmoke;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+.coolShadow{
+    -webkit-box-shadow: 10px 10px 32px -20px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 32px -20px rgba(0,0,0,1);
+    box-shadow: 10px 10px 32px -20px rgba(0,0,0,1);
+}
+
+.bold{
+    font-weight: bold;
+}
+</style>
+{% endblock %}

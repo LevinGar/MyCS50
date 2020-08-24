@@ -1,5 +1,0 @@
-#New page
-
-
-
-Sample text

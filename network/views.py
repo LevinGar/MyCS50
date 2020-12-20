@@ -116,7 +116,7 @@ def following(request, username):
     if request.method == 'GET':
         currentuser = get_object_or_404(User, username=username)
         follows = Profile.objects.filter(follower=currentuser)
-        posts = Post.objects.all().order_by('id').reverse()
+        posts = Post.objects.all().order_by('date').reverse()
         posted = []
         for p in posts:
             for follower in follows:
@@ -136,7 +136,7 @@ def profile(request, username):
     if request.method == 'GET':
         currentuser = request.user
         profileuser = get_object_or_404(User, username=username)
-        posts = Post.objects.filter(user=profileuser).order_by('id').reverse()
+        posts = Post.objects.filter(user=profileuser).order_by('date').reverse()
         follower = Profile.objects.filter(target=profileuser)
         following = Profile.objects.filter(follower=profileuser)
         if request.user.is_anonymous:

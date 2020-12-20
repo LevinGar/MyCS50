@@ -1,0 +1,26 @@
+body{
+    background-color: #e0e0e0;
+}
+
+i{
+    margin-right: 2px;
+}
+
+
+.coolsha{
+    -webkit-box-shadow: 5px 5px 19px 5px rgba(0,0,0,0.18); 
+    box-shadow: 5px 5px 19px 5px rgba(0,0,0,0.18);
+}
+
+.bora{
+    border-radius: 20px;
+}
+
+.csize{
+    width: 45em;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}

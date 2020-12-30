@@ -1,0 +1,48 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container-fluid">
+  <div style="margin-top: 1.5em;"></div>
+  <label for="exampleFormControlInput1">Select location</label>
+  <div class="bora mapdes coolsha center" id="mapin">
+    <!-- MAPIN -->
+  </div>
+  <hr>
+  <div>
+    <form method=post action="{% url 'newpost' username=user.username %}" onsubmit="return validateForm()">
+      {% csrf_token %}
+      <div class="form-row">
+        <div class="col">
+          <label for="exampleFormControlInput1">Help Requester</label>
+          <input type="text" class="form-control" id="req" name="req" placeholder="Unknown">
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Type of prop</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Unknown</option>
+              <option>Food</option>
+              <option>Drugs</option>
+              <option>Clothes/Blankets</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" placeholder="Introduzca descripción de la situación">Description of the place or situation</label>
+        <textarea class="form-control" name="textarea" rows="3" id="desc"></textarea>
+      </div>
+      <button class="btn btn-danger save" type="submit" value="Create"><i class="fa fa-check-square-o"></i>
+        Report
+      </button>
+        <input hidden type="text" name="coor" id="location">
+        <input hidden type="text" name="lat" id="latlo">
+        <input hidden type="text" name="lng" id="lnglo">
+    </form>
+  </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYAQcxlMxQvhBhe1c7vixx66YK5ggUrug&callback=initMapin" defer></script>
+{% endif %}
+{% endblock %}

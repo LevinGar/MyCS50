@@ -8,7 +8,7 @@ Welcome to my CS50 Final Project called Codigo Trapo Rojo, a webpage developed i
   - Go to website address and start using it!.
   
 #### Files and Directories
-*`CodigoTrapoRojo` - Main application directory
+- `CodigoTrapoRojo` - Main application directory
 
 #### Justification
 Código Trapo Rojo ( Red Cloth Code in Spanish ) is a concept of a tool that is planned to be used by organizations or individuals in Mexico that are willing to help others in vulnerable situations due to the COVID-19 crisis. The way this virus affects people varies drastically depending on the country. In the case of Mexico, a big number of elder people are in extreme poverty for the first time due to the economical crisis and the risk of being exposed to the virus. They need to receive help as soon as possible.

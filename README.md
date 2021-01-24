@@ -9,12 +9,34 @@ Welcome to my CS50 Final Project called Codigo Trapo Rojo, a webpage developed i
   
 #### Files and Directories
 - `CodigoTrapoRojo` - Main application directory
-- - `asgi.py` - It exposes the ASGI callable as a module-level variable
-- - `settings.py` - Django settings for CodigoTrapoRojo project.
-- -`urls.py` - CodigoTrapoRojo URL Configuration, list routes URLs to views.
-- - `wsig.py` - It exposes the WSGI callable as a module-level variable named CodigoTrapoRojo.
-- -`wsig.py` - It exposes the WSGI callable as a module-level variable named CodigoTrapoRojo.
-- `network`
+   - `asgi.py` - It exposes the ASGI callable as a module-level variable
+   - `settings.py` - Django settings for CodigoTrapoRojo project.
+   - `urls.py` - CodigoTrapoRojo URL Configuration, list routes URLs to views.
+   - `wsig.py` - It exposes the WSGI callable as a module-level variable named CodigoTrapoRojo.
+   -`wsig.py` - It exposes the WSGI callable as a module-level variable named CodigoTrapoRojo.
+- `network` - CodigoTrapoRojo's application directory (It contains all the logic.)
+   - `\static\network` - It contains static files such as images, css and js files.
+      - `\imgs` - Folder with the webpage images.
+      - `logic.js` - it contains all JavaScript logic used in the webpage incluiding some of the used functions from different APIs
+      - `style.css` - It contains the css used in most screens
+   - `\templates\network` - Contains al application templates.
+      - `config.html` - Profile configuration HTML.
+      - `following.html` - Personal following profiles view HTML.
+      - `index.html` - Main screen HTML.
+      - `intro.html` - Intro with project description and context HTML.
+      - `layout.html` - Shared html layout structure HTML.
+      - `login.html` - Login screen HTML.
+      - `newpost.html` - New post Screen HTML.
+      - `profile.html` - Profile Screen HTML.
+      - `register.html` - Register Screen HTML.
+   - `admin.py` - Place where models are registered to be managed in the administrator module.
+   - `apps.py` - Configured applications.
+   - `models.py` - Contains all models used by the page.
+   - `urls.py` - network URL Configuration, list routes URLs to views.
+   - `views.py` - It contains all the Python logic and methods used in this Django Framework incluiding some APIs requests.
+- `manage.py` - Django's command-line utility for administrative tasks.
+- `requirements.txt` - libraries needed to run this application.
+   
 
 #### Justification
 Código Trapo Rojo ( Red Cloth Code in Spanish ) is a concept of a tool that is planned to be used by organizations or individuals in Mexico that are willing to help others in vulnerable situations due to the COVID-19 crisis. The way this virus affects people varies drastically depending on the country. In the case of Mexico, a big number of elder people are in extreme poverty for the first time due to the economical crisis and the risk of being exposed to the virus. They need to receive help as soon as possible.

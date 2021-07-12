@@ -13,7 +13,7 @@ import json
 
 from .models import User, Post, Profile, Like
 
-API_KEY = 'AIzaSyDYAQcxlMxQvhBhe1c7vixx66YK5ggUrug'
+API_KEY = 'AIzaSyBUlk0tFoJiSH0CqPBnkS4Xdwpmnecp06U'
 base_url = 'https://maps.googleapis.com/maps/api/geocode/json?'
 
 class Edit(forms.Form):

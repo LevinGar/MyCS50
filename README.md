@@ -1,1 +1,1 @@
-# HarvardX CS50 Python and JS Projects
+# Levin's HarvardX CS50 Python and JS Projects

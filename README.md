@@ -48,5 +48,3 @@ Nowadays, people in vulnerable situations have been placing red clothes in front
 By using Código Trapo Rojo, the red cloth system that nowadays is used by many people at least in the north of Mexico could have a bigger scope and become more efficient. It is possible to connect with these vulnerable people that have no internet or ways to ask for help efficiently. The red cloth system is a pattern that is visible in the local news of different cities in the north of Mexico, there is much news about people giving help to vulnerable elders that ask for help using this non-technological system. 
 
 https://youtu.be/uX_cqlsDoOY
-
-VS code test
